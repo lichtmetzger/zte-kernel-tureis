@@ -335,7 +335,7 @@ CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 MODFLAGS	= -DMODULE
 CFLAGS_MODULE   = $(MODFLAGS)
 AFLAGS_MODULE   = $(MODFLAGS)
-LDFLAGS_MODULE  = --strip-debug -T $(srctree)/scripts/module-common.lds
+LDFLAGS_MODULE  = -T $(srctree)/scripts/module-common.lds
 CFLAGS_KERNEL	= -O2 -fomit-frame-pointer -pipe -ffast-math -mtune=arm1136jf-s -mfloat-abi=softfp -fsingle-precision-constant -mfpu=vfp
 AFLAGS_KERNEL	= -O2 -fomit-frame-pointer -pipe -ffast-math -mtune=arm1136jf-s -mfloat-abi=softfp -fsingle-precision-constant -mfpu=vfp
 CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage
